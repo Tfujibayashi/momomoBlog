@@ -1,24 +1,12 @@
-# momomoblog
+ポートフォリオ兼自分のブログ用
 
-## Project setup
-```
-npm install
-```
+- vueで作成
+- firebaseを活用
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+※目下作成中
 
-### Compiles and minifies for production
-```
-npm run build
-```
+デザイン：
+https://xd.adobe.com/view/5a663153-76db-49dd-8da5-18062adbf510-0f35/specs/
 
-### Lints and fixes files
-```
-npm run lint
-```
+github page:
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
