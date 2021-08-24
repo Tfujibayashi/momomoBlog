@@ -4,5 +4,8 @@ module.exports = {
       preProcessor: 'sass',
       patterns: []
     }
-  }
+  },
+  outputDir: 'docs',
+  assetsDir: './',
+  publicPath: './',
 }
