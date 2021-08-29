@@ -1,6 +1,6 @@
-import firebase from 'firebase/app'
-import "firebase/firestore"
-import 'firebase/analytics'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/analytics';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDBWL2liWf2HiAz_cK6iQ-acW97KPDdWsk",
@@ -14,13 +14,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 if (firebase.apps.length === 0) {
-    firebase.initializeApp(firebaseConfig)
+    firebase.initializeApp(firebaseConfig);
 }
 
 firebase.analytics();
 
-const db = firebase.firestore()
-const markdownCollection = db.collection('markdown')
+const db = firebase.firestore();
+const markdownCollection = db.collection('markdown');
 
 export {
     markdownCollection
