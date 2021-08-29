@@ -1,17 +1,19 @@
 <template>
-    <div class="content">
-        <img src="https://placehold.jp/700x450.png">
-        <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
-    </div>
+    <router-link :to="{ name: 'content', params: { id: 'TXeUcMTZZalEIzJV6w6f' }}" >
+        <div class="content">
+                <img src="https://placehold.jp/700x450.png">
+                <p>{{ summary }}</p>
+        </div>
+    </router-link>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'Contetn',
+    name: 'Content',
     props: {
-        msg: String,
+        summary: String,
     },
 });
 </script>
@@ -26,7 +28,6 @@ export default defineComponent({
             max-width: 100%;
         }
         p {
-            
             color: #707070;
             font-size: 1.8rem;
             padding: 15px 0px 10px 0px;
