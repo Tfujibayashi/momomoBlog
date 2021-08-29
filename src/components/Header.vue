@@ -1,6 +1,8 @@
 <template>
     <header>
-        <p class="blog-title">momomo's blog</p>
+        <a href='/'>
+            <p class="blog-title">momomo's blog</p>
+        </a>
     </header>
 </template>
 
