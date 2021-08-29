@@ -3,17 +3,9 @@
     <h2 class="blog-introduction">ポートフォリオとして作ってみたブログです。気になることあったらお気軽にご質問ください。 <br>何かプログラミングで悩んでることの相談も大丈夫です。</h2>
 
     <div class="contents-wrapper">
-      <Content/>
-      <Content/>
-      <Content/>
-    </div>
-
-    <p class="top-content-introduction">よく読まれている記事です。</p>
-
-    <div class="contents-wrapper">
-      <Content/>
-      <Content/>
-      <Content/>
+      <Content summary='aaaaa'></Content>
+      <Content summary='aaaaa'></Content>
+      <Content summary='aaaaa'></Content>
     </div>
   </main>
 </template>
@@ -21,13 +13,16 @@
 <script>
 import Content from '@/components/Content.vue'
 
+import { markdownCollection } from '@/firebase';
+
 export default {
   name: 'Home',
   components: {
     Content
   },
-  fetch: () => {
-    console.log('コンテンツデータ取得')
+  async beforeCreate () {
+    // const markdownList = await this.markdownCollection.doc(id).get();
+    // console.log(markdownList)
   }
 }
 </script>
@@ -52,7 +47,7 @@ export default {
     }
 
     .top-content-introduction {
-      font-size: 2rem;
+      font-size: 1.6rem;
       margin-top: 30px;
       margin-bottom: 60px;
     }
