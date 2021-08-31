@@ -1,8 +1,8 @@
 <template>
     <header>
-        <a href='/'>
+        <router-link to="/">
             <p class="blog-title">momomo's blog</p>
-        </a>
+        </router-link>
     </header>
 </template>
 
