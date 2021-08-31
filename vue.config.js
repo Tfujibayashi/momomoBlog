@@ -7,10 +7,5 @@ module.exports = {
   },
   outputDir: 'docs',
   assetsDir: './',
-  publicPath: '/momomoBlog/',
-  pwa: {
-    iconPaths: {
-      favicon32: 'favicon.ico',
-    }
-  }
+  publicPath: '/momomoBlog/'
 }
