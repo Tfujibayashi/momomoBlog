@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import firebase from 'firebase';
 
 import Home from '../views/Home.vue';
@@ -78,7 +78,8 @@ const scrollBehavior = (to: any, from: any, savedPosition: any) => {
 const DEFAULT_TITLE = 'もももブログ';
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  // history: createWebHistory(process.env.BASE_URL), history mode
+  history: createWebHashHistory('location.pathname'),
   routes,
   scrollBehavior
 });
