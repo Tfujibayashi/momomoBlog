@@ -22,6 +22,7 @@ export default defineComponent({
 
         .blog-title {
             color: #707070;
+            display: inline-block;
             font-size: 2.4rem;
             padding: 25px 0;
         }
