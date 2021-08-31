@@ -1,7 +1,7 @@
 <template>
     <router-link :to="{ name: 'content', params: { id: 'TXeUcMTZZalEIzJV6w6f' }}" >
         <div class="content">
-                <img src="https://placehold.jp/700x450.png">
+                <img :src="imgURL">
                 <p>{{ summary }}</p>
         </div>
     </router-link>
@@ -13,6 +13,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'Content',
     props: {
+        imgURL: String,
         summary: String,
     },
 });
