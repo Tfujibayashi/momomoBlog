@@ -1,6 +1,6 @@
 <template>
     <div class='content-wrapper'>
-        <div v-html="compiledMarkdown"></div>
+        <div v-html="compiledMarkdown" class="markdown-body"></div>
     </div>
 </template>
 
@@ -41,24 +41,13 @@ export default {
     }
 }
 </script>
-<style scoped lang="scss">
-    textarea {
-        border: none;
-        border-right: 1px solid #ccc;
-        resize: none;
-        outline: none;
-        background-color: #f6f6f6;
-        font-size: 14px;
-        padding: 20px;
-    }
 
-    code {
-        color: #f66;
-    }
+<style scoped lang="scss" src="../assets/scss/markdown.scss"></style>
+<style scoped lang="scss" >
+.content-wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
 
-    .content-wrapper {
-        margin: 0 auto;
-        height: 100%;
-        width: 80%;
-    }
+
 </style>
