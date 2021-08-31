@@ -35,7 +35,7 @@ body {
 }
 
 .router-view {
-  height: 80%;
+  min-height: calc(100% - 80px);
 }
 
 /*!
