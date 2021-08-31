@@ -22,6 +22,8 @@ firebase.analytics();
 const db = firebase.firestore();
 const markdownCollection = db.collection('markdown');
 
+export const storage = firebase.storage();
+
 export {
     markdownCollection
 }
