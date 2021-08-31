@@ -6,9 +6,9 @@
                 v-bind:index="index"
                 v-bind:key="markdown.id"
             >
-                <a :href="`edit/${markdown[0]}`">
+                <router-link class="router-link" :to="{ name: 'editor', params: { id: markdown[0] }}">
                     {{markdown[1].summary.slice( 0, 10 )}}
-                </a>
+                </router-link>
             </li>
         </ul>
     </div>
@@ -29,7 +29,6 @@ export default {
         markdowns.forEach(async (doc) => {
             this.markdownList.push([doc.id, doc.data()]);
         })
-        console.log(this.markdownList)
     }
 }
 </script>
@@ -55,7 +54,7 @@ export default {
             margin-bottom: 20px;
         }
 
-        a {
+        .router-link {
             color: #404040;
             display: block;
             padding: 0.5em;

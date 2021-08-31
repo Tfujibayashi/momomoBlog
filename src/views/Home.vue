@@ -5,10 +5,11 @@
     <div class="contents-wrapper">
       <Content
         v-for="(markdown, index) in markdownList"
-        v-bind:index="index"
-        v-bind:key="markdown.id"
-        v-bind:summary="markdown[1].summary"
-        v-bind:imgURL="markdown[0]"
+        :index="index"
+        :key="markdown.id"
+        :summary="markdown[2].summary"
+        :imgURL="markdown[0]"
+        :contentId="markdown[1]"
       ></Content>
     </div>
   </main>
@@ -36,10 +37,10 @@ export default {
 
       try {
         await storageRef.getDownloadURL().then(url => {
-          this.markdownList.push([url, doc.data()]);
+          this.markdownList.push([url, doc.id, doc.data()]);
         });
       } catch {
-        this.markdownList.push(['https://firebasestorage.googleapis.com/v0/b/momomoblog-f6697.appspot.com/o/default.png?alt=media&token=a5cd9864-8596-426e-aa78-cdb8f23d7783', doc.data()]);
+        this.markdownList.push(['https://firebasestorage.googleapis.com/v0/b/momomoblog-f6697.appspot.com/o/default.png?alt=media&token=a5cd9864-8596-426e-aa78-cdb8f23d7783', doc.id, doc.data()]);
       }
     })
   }
