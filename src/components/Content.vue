@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name: 'content', params: { id: 'TXeUcMTZZalEIzJV6w6f' }}" >
+    <router-link :to="{ name: 'content', params: { id: contentId }}" >
         <div class="content">
                 <img :src="imgURL">
                 <p>{{ summary }}</p>
@@ -15,6 +15,7 @@ export default defineComponent({
     props: {
         imgURL: String,
         summary: String,
+        contentId: String
     },
 });
 </script>
